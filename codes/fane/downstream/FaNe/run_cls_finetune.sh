@@ -1,0 +1,9 @@
+CUDA_VISIBLE_DEVICES=3 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 1 --dataset chexpert --batch_size 96 --learning_rate 5e-4
+CUDA_VISIBLE_DEVICES=3 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 0.1 --dataset chexpert  --learning_rate 5e-4
+CUDA_VISIBLE_DEVICES=3 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 0.01 --dataset chexpert  --learning_rate 5e-4
+CUDA_VISIBLE_DEVICES=3 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 1 --dataset rsna --batch_size 96 --learning_rate 5e-4
+CUDA_VISIBLE_DEVICES=3 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 0.1 --dataset rsna  --learning_rate 5e-4
+CUDA_VISIBLE_DEVICES=1 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 0.01 --dataset rsna  --learning_rate 5e-4
+CUDA_VISIBLE_DEVICES=3 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 1 --dataset covidx --batch_size 96 --learning_rate 5e-4
+CUDA_VISIBLE_DEVICES=3 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 0.1 --dataset covidx  --learning_rate 5e-4
+CUDA_VISIBLE_DEVICES=3 python codes/prior/downstream/FaNe/fane_classification.py --gpus 1 --base_model vit --data_pct 0.01 --dataset covidx  --learning_rate 5e-4
