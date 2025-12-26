@@ -1,0 +1,4 @@
+tensorboard:
+    _target_: pytorch_lightning.loggers.TensorBoardLogger
+    save_dir: "/data/zhangpeng/HAMeR/pretraining_log"         # pretraining
+    name: ${experiment_name}_${running_time}

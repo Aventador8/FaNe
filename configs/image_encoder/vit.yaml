@@ -1,0 +1,4 @@
+_target_: fane.encoders.image.vit_encoder.VitEncoder
+model_name: ???
+output_dim: 128
+weights_path: "/data/zhangpeng/deit_base_patch16_224-b5f2ef4d.pth"

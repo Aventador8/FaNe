@@ -1,0 +1,4 @@
+log_to_file:
+    _target_: fane.utils.log_to_file.LogLossToFileCallback
+#    log_file: '/data/zhangpeng/fane/zero_shot_classification/testing.log'    # zero-shot
+    log_file: '/data/zhangpeng/fane/logs/vit_full_loss_threshold_0.95.log'          # pretraining

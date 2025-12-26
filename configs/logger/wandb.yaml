@@ -1,0 +1,6 @@
+wandb:
+    _target_: pytorch_lightning.loggers.wandb.WandbLogger
+    project: "mcga"
+    offline: true
+    save_dir: "/data/zhangpeng/fane/log"
+    name: ${experiment_name}_${running_time}

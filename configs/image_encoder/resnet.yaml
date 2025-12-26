@@ -1,0 +1,3 @@
+_target_: fane.encoders.image.resnet_encoder.ResEncoder
+pretrained: true
+weights_path: "/data/zhangpeng/resnet50-0676ba61.pth"

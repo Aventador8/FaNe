@@ -1,0 +1,5 @@
+defaults:
+  - callbacks: 
+    - model_checkpoint
+    - log_to_file
+

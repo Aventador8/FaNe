@@ -1,0 +1,55 @@
+# @package _global_
+defaults:
+  - /pretrain_model: fane
+  - /image_transformation
+  - /callbacks:  
+      - model_checkpoint
+      - early_stopping
+#      - upload_config
+      - lr_monitor
+  - /logger:
+      - tensorboard
+  - /image_encoder@pretrain_model.image_encoder: vit
+#  - /image_encoder@pretrain_model.image_encoder: resnet
+  - /text_encoder@pretrain_model.text_encoder: clinical_bert
+  - /data@pretrain_model.train_dataset: mimiccxr
+
+
+pretrain_model:
+    stage1_learning_rate: 2e-5
+    stage1_learning_rate_start: 1e-8
+    stage1_learning_rate_end: 2e-5
+#    max_epochs: 100
+    max_epochs: 100
+    optim: adamw
+    stage1_warmup_epochs: 20
+    image_encoder:
+        model_name: vit_base
+#    image_encoder:
+#      model_name: resnet_50
+#      pool_method: attention
+    train_dataset:
+      image_transform:
+        - ${image_transformation.resize}
+        - ${image_transformation.random_affine}
+        - ${image_transformation.random_horizontal_flip}
+      rate: 1.0
+      text_transform: []
+      max_length: 112
+    temperature: 0.01
+    local_temperature: 0.01
+    intra_temperature: 0.01
+    batch_size: 98
+    temp_decay: fixed
+    image_encoder_mode: vit
+
+
+num_workers: 16
+trainer:
+  gpus: [0,1]
+  sync_batchnorm: true
+  precision: 16
+experiment_name: aaai_fane_on_mimic_cxr_exp_decay_100
+
+
+

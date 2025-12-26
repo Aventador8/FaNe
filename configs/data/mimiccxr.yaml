@@ -1,0 +1,6 @@
+_target_: fane.data.pretrain.mimiccxr.MimicCxrDataset
+dataset_path:  '/data/zhangpeng/PRIOR/data.json'    # update this line
+image_transform: ???
+text_transform: ???
+num_colors: 3
+rate: 1.0

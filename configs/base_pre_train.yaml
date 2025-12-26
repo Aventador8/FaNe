@@ -1,0 +1,15 @@
+defaults:
+  - base_config
+  - base_logger
+  - base_callback
+  - base_trainer
+  - image_transformation
+
+task: pre_train
+
+experiment_name: ???
+logger:
+  log_dir: ../logs/${experiment_name}/${running_time}
+
+  monitor_metric: 'loss'
+  monitor_metric_mode: 'min'
