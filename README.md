@@ -1,8 +1,5 @@
 # FaNe
-[AAA1-2026] Official code for "FaNe: Towards Fine-Grained Cross-Modal Contrast with False-Negative Reduction and Text-Conditioned Sparse Attention"
-
-## FaNe
-[FaNe: Towards Fine-Grained Cross-Modal Contrast with False-Negative Reduction and Text-Conditioned Sparse Attention](https://arxiv.org/abs/2511.12215), AAAI 2026.
+[AAA1-2026] Official code for "[FaNe: Towards Fine-Grained Cross-Modal Contrast with False-Negative Reduction and Text-Conditioned Sparse Attention](https://arxiv.org/abs/2511.12215)"
 
 ![framework](docs/overview.jpg)
 
